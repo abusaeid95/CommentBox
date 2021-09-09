@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Now Making Comments</h1>
+    <div id="comment-adding">
+        <p>It's very hard to learn for me because of my brain not enough sharp still now, i don't know what the main things</p>
+        <p>It's very hard to learn for me because of my brain not enough sharp still now, i don't know what the main things</p>
+    </div>
+    <textarea name="" id="combox" cols="60" rows="4"></textarea>
+    <br>
+    <button id="comment-btn">Comment</button>
+
+    <script>
+        document.getElementById('comment-btn').addEventListener('click', function (){
+            const textArea = document.getElementById('combox');
+            const newP = document.createElement('p');
+            newP.innerText = textArea.value;
+            const comAdding = document.getElementById('comment-adding');
+            comAdding.appendChild(newP);
+            textArea.value = "";
+            
+        })
+    </script>
+</body>
+</html>
